@@ -1,0 +1,36 @@
+{
+  "name": "expensetrackerbackend",
+  "version": "1.0.0",
+  "description": "Backend server for the Expense Tracker App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon index.js",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dami-laare/expenseTrackerBackend.git"
+  },
+  "author": "Temitayo Osunkiyesi (Nexus)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dami-laare/expenseTrackerBackend/issues"
+  },
+  "homepage": "https://github.com/dami-laare/expenseTrackerBackend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.7.0",
+    "mongoose": "^6.4.0",
+    "nodemailer": "^6.7.5",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
