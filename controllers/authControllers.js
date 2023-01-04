@@ -82,7 +82,11 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     subject: "Reset Password",
     text: `Hey ${capitalize(
       user.first_name
-    )}\nPlease click the link below to reset your password.(Note: This link expires in 10 minutes)\n\nhttp://localhost:3000/password/forgot?token=${resetToken}\n\nIf you did not request for this mail please ignore this mail.\nThanks!`,
+    )}\nPlease click the link below to reset your password.(Note: This link expires in 10 minutes)\n\n${
+      process.env.NODE_ENV.toLowerCase() === "development"
+        ? "http://localhost:3000"
+        : ""
+    }/password/forgot?token=${resetToken}\n\nIf you did not request for this mail please ignore this mail.\nThanks!`,
   };
 
   try {
